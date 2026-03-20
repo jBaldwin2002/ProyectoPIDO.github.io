@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 
 function Dashboard() {
+    const navigate = useNavigate();
     return (
         <div className="flex min-h-screen bg-slate-50 dark:bg-slate-900">
             <Sidebar />
@@ -124,13 +126,13 @@ function Dashboard() {
 
                     {/* Quick Actions */}
                     <div className="grid grid-cols-3 gap-4">
-                        <button className="flex flex-col items-center justify-center p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-purple-600/50 transition-all group">
+                        <button onClick={() => navigate('/enviar')} className="flex flex-col items-center justify-center p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-purple-600/50 transition-all group">
                             <div className="w-12 h-12 rounded-full bg-purple-600/10 text-purple-600 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
                                 <span className="material-symbols-outlined">send</span>
                             </div>
                             <span className="text-sm font-semibold">Enviar</span>
                         </button>
-                        <button className="flex flex-col items-center justify-center p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-purple-600/50 transition-all group">
+                        <button onClick={() => navigate('/intercambio')} className="flex flex-col items-center justify-center p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-purple-600/50 transition-all group">
                             <div className="w-12 h-12 rounded-full bg-purple-600/10 text-purple-600 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
                                 <span className="material-symbols-outlined">swap_calls</span>
                             </div>
