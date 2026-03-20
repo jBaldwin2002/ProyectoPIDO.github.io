@@ -48,13 +48,27 @@ function Sidebar() {
                     <span>Intercambio</span>
                 </Link>
 
-                <a
-                    href="#"
-                    className="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                <Link
+                    to="/historial"
+                    className={`flex items-center gap-3 px-3 py-2 rounded-lg font-medium transition-colors ${isActive('/historial')
+                        ? 'bg-purple-600/10 text-purple-600'
+                        : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
+                        }`}
                 >
                     <span className="material-symbols-outlined">history</span>
                     <span>Historial</span>
-                </a>
+                </Link>
+
+                <Link
+                    to="/enviar"
+                    className={`flex items-center gap-3 px-3 py-2 rounded-lg font-medium transition-colors ${isActive('/enviar')
+                        ? 'bg-purple-600/10 text-purple-600'
+                        : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
+                        }`}
+                >
+                    <span className="material-symbols-outlined">send</span>
+                    <span>Enviar</span>
+                </Link>
 
                 <a
                     href="#"
