@@ -7,13 +7,10 @@ function Sidebar() {
 
     return (
         <aside className="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hidden lg:flex flex-col sticky top-0 h-screen">
-            <div className="p-6 flex items-center gap-3">
-                <div className="bg-purple-600 rounded-lg p-2 text-white">
-                    <span className="material-symbols-outlined block">currency_exchange</span>
-                </div>
+            <div className="p-6 flex items-center gap-0.5">
+                <img src="/LOGO-PIDO.png" alt="PIDO" className="w-10 h-10 rounded-lg" />
                 <div>
                     <h1 className="text-xl font-bold tracking-tight text-purple-600">PIDO</h1>
-                    <p className="text-[10px] uppercase tracking-widest text-slate-500 font-semibold">Fintech Platform</p>
                 </div>
             </div>
 
